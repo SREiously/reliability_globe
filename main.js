@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js'
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -9,7 +8,7 @@ document.body.appendChild(renderer.domElement);
 
 // Create our base earth and add the texture from image
 const loader = new THREE.TextureLoader();
-const material = new THREE.MeshLambertMaterial({ map: loader.load("static/earth2.jpg")});
+const material = new THREE.MeshLambertMaterial({ map: loader.load("static/earth.jpg")});
 const geometry = new THREE.SphereGeometry(6, 50, 50);
 const earth = new THREE.Mesh(geometry, material);
 earth.rotation.x += 0.4;
